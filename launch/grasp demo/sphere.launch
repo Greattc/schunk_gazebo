@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+ 	  
+	<param name="sphere_description" command="$(find xacro)/xacro.py '$(find demo_grasp)/urdf/sphere_object.urdf.xacro'" />
+	<node name="sphere_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -x -0.88 -y 0.0 -z 0.795 -wait cup -model sphere -param sphere_description "/>  
+
+</launch>  

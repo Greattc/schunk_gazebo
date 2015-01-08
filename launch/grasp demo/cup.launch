@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+	  
+	<param name="cup_description" command="$(find xacro)/xacro.py '$(find demo_grasp)/urdf/cup.urdf.xacro'" />
+	<node name="cup_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -x -0.88 -y 0.0 -z 0.79 -model cup  -param cup_description "/>  
+
+</launch>  
